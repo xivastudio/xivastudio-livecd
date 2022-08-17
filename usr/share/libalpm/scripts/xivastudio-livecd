@@ -1,0 +1,5 @@
+#!/bin/sh
+
+#troca icone boot
+cp /usr/share/pixmaps/icon-logo-xivastudio.png  /usr/share/bigbashview/bcc/apps/boot-livecd/
+find /usr/share/bigbashview/bcc/apps/boot-livecd/ -type f -exec sed -i 's/icon-logo-biglinux.png/icon-logo-xivastudio.png/' {} +

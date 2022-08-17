@@ -1,0 +1,10 @@
+[Trigger]
+Type = Package
+Operation = Install
+Operation = Upgrade
+Target = biglinux-livecd
+
+[Action]
+Description = Multi configurations to login on KDE
+When = PostTransaction
+Exec = /usr/share/libalpm/scripts/xiva-livecd

@@ -1,0 +1,15 @@
+pkgname=xivastudio-livecd
+pkgver=1.00
+pkgrel=1
+arch=('any')
+license=('GPL')
+depends=('biglinux-livecd')
+url="https://github.com/xivastudio/xivastudio-livecd"
+pkgdesc="Icons and changes for livecd"
+source=("git+https://github.com/xivastudio/xivastudio-livecd.git")
+md5sums=(SKIP)
+install=post.install
+
+package() {
+    cp -r "${srcdir}/xivastudio-livecd/usr/" "${pkgdir}/"
+}
