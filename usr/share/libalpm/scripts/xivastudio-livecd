@@ -2,6 +2,7 @@
 
 #troca icone boot
 # cp /usr/share/pixmaps/icon-logo-xivastudio.png  /usr/share/bigbashview/bcc/apps/boot-livecd/
-cp /usr/share/pixmaps/icon-logo-xivastudio.gif  /usr/share/bigbashview/bcc/apps/boot-livecd/
+# cp /usr/share/pixmaps/icon-logo-xivastudio.gif  /usr/share/bigbashview/bcc/apps/boot-livecd/
 # find /usr/share/bigbashview/bcc/apps/boot-livecd/ -type f -exec sed -i 's/icon-logo-biglinux.png/icon-logo-xivastudio.png/' {} +
-sed -i '/biglinuxlogo/s/icon-logo-biglinux.png/icon-logo-xivastudio.gif/' /usr/share/bigbashview/bcc/apps/boot-livecd/index.sh.htm
+# sed -i '/biglinuxlogo/s/icon-logo-biglinux.png/icon-logo-xivastudio.gif/' /usr/share/bigbashview/bcc/apps/boot-livecd/index.sh.htm
+cp icon-logo-xivastudio.gif icon-logo-biglinux.png
