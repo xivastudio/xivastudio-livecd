@@ -10,7 +10,9 @@
 ## arg 1:  the new package version
 post_install() {
 
-bash /usr/share/libalpm/scripts/xivastudio-livecd
+# bash /usr/share/libalpm/scripts/xivastudio-livecd
+cd /usr/share/bigbashview/bcc/apps/boot-livecd/
+cp icon-logo-xivastudio.gif icon-logo-biglinux.png
 
 }
 ## arg 2:  the old package version
