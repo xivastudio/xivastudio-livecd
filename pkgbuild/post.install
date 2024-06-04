@@ -11,8 +11,9 @@
 post_install() {
 
 # bash /usr/share/libalpm/scripts/xivastudio-livecd
-cd /usr/share/bigbashview/bcc/apps/boot-livecd/
-cp icon-logo-xivastudio.gif icon-logo-biglinux.png
+# cd /usr/share/bigbashview/bcc/apps/boot-livecd/
+# cp icon-logo-xivastudio.gif icon-logo-biglinux.png
+bash /usr/share/libalpm/scripts/xivastudio-livecd
 
 }
 ## arg 2:  the old package version
