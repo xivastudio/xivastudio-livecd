@@ -1,6 +1,6 @@
 pkgname=xivastudio-livecd
-pkgver=1.00
-pkgrel=4
+pkgver=$(date +%y.%m.%d)
+pkgrel=$(date +%H%M)
 arch=('any')
 license=('GPL')
 depends=('biglinux-livecd')
