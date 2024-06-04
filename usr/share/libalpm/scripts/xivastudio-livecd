@@ -5,5 +5,6 @@
 # cp /usr/share/pixmaps/icon-logo-xivastudio.gif  /usr/share/bigbashview/bcc/apps/boot-livecd/
 # find /usr/share/bigbashview/bcc/apps/boot-livecd/ -type f -exec sed -i 's/icon-logo-biglinux.png/icon-logo-xivastudio.png/' {} +
 # sed -i '/biglinuxlogo/s/icon-logo-biglinux.png/icon-logo-xivastudio.gif/' /usr/share/bigbashview/bcc/apps/boot-livecd/index.sh.htm
-cp icon-logo-xivastudio.gif icon-logo-biglinux.png
+# cp icon-logo-xivastudio.gif icon-logo-biglinux.png
+sed -i 's|/usr/share/icons/hicolor/scalable/apps/big-favicon-new.svg|/usr/share/bigbashview/apps/livecd/icon-logo-xivastudio.gif|' /usr/share/bigbashview/apps/livecd/*.htm*
 sed -i '/ExecStart=/s/biglinux/xivastudio/' /usr/lib/systemd/system/getty@.service
