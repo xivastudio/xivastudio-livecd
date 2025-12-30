@@ -20,3 +20,4 @@ package() {
     install -Dm644 "${srcdir}/xivastudio-livecd/usr/share/pixmaps/icon-logo-xivastudio.gif" \
         "${pkgdir}/usr/share/pixmaps/icon-logo-xivastudio.gif"
 }
+
