@@ -8,10 +8,12 @@ url="https://github.com/xivastudio/xivastudio-livecd"
 pkgdesc="XivaStudio custom logo for live CD boot wizard"
 source=("git+https://github.com/xivastudio/xivastudio-livecd.git")
 md5sums=(SKIP)
+if [ -e "${pkgname}.install" ];then
+    install=${pkgname}.install
+elif [ -e "pkgbuild.install" ];then
+    install=pkgbuild.install
+fi
 
-# Note: No post.install needed anymore.
-# The biglinux-livecd GTK4 app automatically detects and uses
-# /usr/share/pixmaps/icon-logo-xivastudio.{png,gif} if present.
 
 package() {
     # Only install pixmaps - the GTK4 app auto-detects them
@@ -19,6 +21,5 @@ package() {
         "${pkgdir}/usr/share/pixmaps/icon-logo-xivastudio.png"
     install -Dm644 "${srcdir}/xivastudio-livecd/usr/share/pixmaps/icon-logo-xivastudio.gif" \
         "${pkgdir}/usr/share/pixmaps/icon-logo-xivastudio.gif"
-    ln -sfn "${srcdir}/usr/bin/calamares-biglinux_polkit" "${srcdir}/usr/bin/calamares-xivalinux_polkit"
 }
 
