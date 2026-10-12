@@ -19,7 +19,6 @@ package() {
         "${pkgdir}/usr/share/pixmaps/icon-logo-xivastudio.png"
     install -Dm644 "${srcdir}/xivastudio-livecd/usr/share/pixmaps/icon-logo-xivastudio.gif" \
         "${pkgdir}/usr/share/pixmaps/icon-logo-xivastudio.gif"
-    ln -sfn "${srcdir}/usr/bin/calamares-biglinux_polkit" \
-        "${srcdir}/usr/bin/calamares-xivalinux_polkit"
+    ln -sfn "${srcdir}/usr/bin/calamares-biglinux_polkit" "${srcdir}/usr/bin/calamares-xivalinux_polkit"
 }
 
