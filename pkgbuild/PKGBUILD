@@ -4,25 +4,12 @@ pkgrel=$(date +%H%M)
 arch=('any')
 license=('GPL')
 depends=('biglinux-livecd')
-url="https://github.com/xivastudio/xivastudio-livecd"
+url="https://github.com/xivastudio/$pkgname"
 pkgdesc="XivaStudio custom logo for live CD boot wizard"
-source=("git+https://github.com/xivastudio/xivastudio-livecd.git")
+source=("git+https://github.com/xivastudio/$pkgname.git")
 md5sums=(SKIP)
-install=pkgbuild.install
-
+install=post.install
 
 package() {
-    # # Only install pixmaps - the GTK4 app auto-detects them
-    # install -Dm644 "${srcdir}/xivastudio-livecd/usr/share/pixmaps/icon-logo-xivastudio.png" \
-    #     "${pkgdir}/usr/share/pixmaps/icon-logo-xivastudio.png"
-    # install -Dm644 "${srcdir}/xivastudio-livecd/usr/share/pixmaps/icon-logo-xivastudio.gif" \
-    #     "${pkgdir}/usr/share/pixmaps/icon-logo-xivastudio.gif"
-    # Verify default folder
-    if [ -d "${srcdir}/${pkgname}/${pkgname}" ]; then
-        InternalDir="${srcdir}/${pkgname}/${pkgname}"
-    else
-        InternalDir="${srcdir}/${pkgname}"
-    fi
-    cp -r "${InternalDir}/usr" "${pkgdir}/"
+    cp -r "${srcdir}/$pkgname/usr/" "${pkgdir}/"
 }
-
