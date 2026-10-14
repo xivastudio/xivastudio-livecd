@@ -1,5 +1,0 @@
-post_install() {
-  echo "XPTO"
-  cp -f /usr/share/pixmaps/icon-logo-xivastudio.png /usr/share/biglinux/livecd/assets/logo.png
-  sed -i '/^ID=/s/ID=.*/ID=xivastudio/' /etc/os-release
-}
