@@ -8,11 +8,7 @@ url="https://github.com/xivastudio/xivastudio-livecd"
 pkgdesc="XivaStudio custom logo for live CD boot wizard"
 source=("git+https://github.com/xivastudio/xivastudio-livecd.git")
 md5sums=(SKIP)
-if [ -e "${pkgname}.install" ];then
-    install=${pkgname}.install
-elif [ -e "pkgbuild.install" ];then
-    install=pkgbuild.install
-fi
+install=pkgbuild.install
 
 
 package() {
