@@ -10,9 +10,8 @@
 ## arg 1:  the new package version
 post_install() {
 
-echo "XPTO"
-cp -f /usr/share/pixmaps/icon-logo-xivastudio.png /usr/share/biglinux/livecd/assets/logo.png
-sed -i '/^ID=/s/ID=.*/ID=xivastudio/' /etc/os-release
+	cp -f /usr/share/pixmaps/icon-logo-xivastudio.png /usr/share/biglinux/livecd/assets/logo.png
+	sed -i '/^ID=/s/ID=.*/ID=xivastudio/' /etc/os-release
 
 }
 ## arg 2:  the old package version
@@ -21,9 +20,9 @@ sed -i '/^ID=/s/ID=.*/ID=xivastudio/' /etc/os-release
 #}
 
 ## arg 2:  the old package version
-#post_upgrade() {
-	# do something here
-#}
+post_upgrade() {
+	post_install
+}
 
 ## arg 1:  the old package version
 #pre_remove() {
